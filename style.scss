@@ -1,0 +1,59 @@
+@import "./sass/reset";
+@import "./sass/colors";
+@import "./sass/typo";
+@import "./sass/mixins";
+
+body {
+  background-color: $lighterBlack;
+
+  header {
+    width: 100vw;
+    padding: 26px;
+    background-color: $darkerBlack;
+
+    .container-header {
+      margin: 0 auto;
+      max-width: 1080px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+      position: relative;
+
+      @include ipad {
+        flex-direction: row;
+      }
+
+      .logo {
+        text-transform: uppercase;
+        align-self: flex-start;
+        @include ipad {
+          align-self: auto;
+        }
+
+        @extend %typoLogo;
+        span {
+          color: $red;
+        }
+      }
+
+      ul {
+        max-width: 375px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        text-transform: uppercase;
+        @extend %typoMenuBar;
+        li > a {
+          @include transition;
+          &:hover {
+            color: darken($white, 25%);
+          }
+        }
+      }
+    }
+  }
+}

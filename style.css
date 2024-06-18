@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@100..900&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+body {
+  font-family: "Inria Sans";
+}
+
+body header .container-header .logo {
+  font-family: Inria Sans;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.16px;
+}
+
+body header .container-header ul {
+  font-family: Inria Sans;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.79px;
+  letter-spacing: 0.03em;
+}
+
+/* MEDIA QUERIES */
+body {
+  background-color: #191b20;
+}
+body header {
+  width: 100vw;
+  padding: 26px;
+  background-color: #141517;
+}
+body header .container-header {
+  margin: 0 auto;
+  max-width: 1080px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  body header .container-header {
+    flex-direction: row;
+  }
+}
+body header .container-header .logo {
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+@media screen and (min-width: 768px) {
+  body header .container-header .logo {
+    align-self: auto;
+  }
+}
+body header .container-header .logo span {
+  color: #cc0000;
+}
+body header .container-header ul {
+  max-width: 375px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+body header .container-header ul li > a {
+  transition: all 0.5s ease-in-out;
+}
+body header .container-header ul li > a:hover {
+  color: #bfbfbf;
+}/*# sourceMappingURL=style.css.map */
