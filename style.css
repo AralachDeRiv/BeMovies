@@ -22,6 +22,14 @@ body {
   font-family: "Inria Sans";
 }
 
+input {
+  all: unset;
+}
+
+button {
+  border: none;
+}
+
 body header .container-header .logo {
   font-family: Inria Sans;
   font-size: 36px;
@@ -37,6 +45,14 @@ body header .container-header ul {
   letter-spacing: 0.03em;
 }
 
+body main .searchMovie .searchMovieInput {
+  font-family: Inria Sans;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
 /* MEDIA QUERIES */
 body {
   background-color: #191b20;
@@ -44,6 +60,7 @@ body {
 body header {
   width: 100vw;
   padding: 26px;
+  margin-bottom: 73px;
   background-color: #141517;
 }
 body header .container-header {
@@ -86,4 +103,35 @@ body header .container-header ul li > a {
 }
 body header .container-header ul li > a:hover {
   color: #bfbfbf;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .searchMovie {
+  display: flex;
+  align-items: center;
+}
+body main .searchMovie .searchMovieInput {
+  font-size: 20px;
+  font-weight: 400;
+  color: #141517;
+  background-color: #ffffff;
+  padding-left: 5px;
+  height: 44px;
+  width: 230px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+body main .searchMovie .searchMovieBtn {
+  background-color: #cc0000;
+  height: 44px;
+  width: 44px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+body main .searchMovie .searchMovieBtn:hover {
+  background-color: #660000;
 }/*# sourceMappingURL=style.css.map */
