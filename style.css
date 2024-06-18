@@ -130,7 +130,14 @@ body main .searchMovie .searchMovieBtn {
   width: 44px;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.5s ease-in-out;
+}
+body main .searchMovie .searchMovieBtn img {
+  width: 24px;
+  height: 18px;
 }
 body main .searchMovie .searchMovieBtn:hover {
   background-color: #660000;

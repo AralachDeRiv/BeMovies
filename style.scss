@@ -85,6 +85,14 @@ body {
         width: 44px;
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 24px;
+          height: 18px;
+        }
 
         @include transition;
         &:hover {
