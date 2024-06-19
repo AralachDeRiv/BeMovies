@@ -17,9 +17,9 @@
           <p><span>Be</span>Movies</p>
         </div>
         <ul>
-          <li><a href="# ">Search</a></li>
-          <li><a href="# ">Latest</a></li>
-          <li><a href="# ">Genres</a></li>
+          <li><a href="#searchMovie">Search</a></li>
+          <li><a href="#latest-releases">Latest</a></li>
+          <li><a href="#movies-by-genre">Genres</a></li>
           <li><a href="# ">Register</a></li>
           <li><a href="# ">SignIn</a></li>
         </ul>
@@ -33,32 +33,145 @@
         </button>
       </form>
       <div class="swipers-container result-container">
-        <h2>Results for XXX</h2>
-        <div class="swiper mySwiper">
+        <h2 id="title-results">Results for XXX</h2>
+        <div class="swiper swiper-result">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">
+              <div class="card-movie">
+                <!-- mettre le titre -->
+                <h2>The God Father part III</h2>
+                <p class="date">1990</p>
+                <!-- list genre max 3 -->
+                <p class="genres">Crime / Drama / Thriller</p>
+                <div class="star">
+                  <img src="./img/star.svg" alt="" />
+                </div>
+                <!-- rate -->
+                <p class="rate">7.4</p>
+                <div class="poster">
+                  <!-- lien poster -->
+                  <img
+                    src="https://image.tmdb.org/t/p/w500/gKkl37BQuKTanygYQG1pyYgLVgf.jpg"
+                  />
+                </div>
+              </div>
+            </div>
             <div class="swiper-slide">Slide 2</div>
             <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
             <div class="swiper-slide">Slide 5</div>
             <div class="swiper-slide">Slide 6</div>
             <div class="swiper-slide">Slide 7</div>
             <div class="swiper-slide">Slide 8</div>
             <div class="swiper-slide">Slide 9</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 7</div>
           </div>
         </div>
         <img
-          class="swiper-button-prev swiper-arrow-prev"
+          class="swiper-button-prev swiper-arrow-prev result-arrow-prev"
           src="./img/swiperArrowLeft.svg"
         />
         <img
-          class="swiper-button-next swiper-arrow-next"
+          class="swiper-button-next swiper-arrow-next result-arrow-next"
+          src="./img/swiperArrowRigth.svg"
+        />
+      </div>
+      <div
+        id="latest-releases"
+        class="swipers-container latest-releases-container"
+      >
+        <h2>Latest releases</h2>
+        <div class="swiper swiper-latest-releases">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 7</div>
+          </div>
+        </div>
+        <img
+          class="swiper-button-prev swiper-arrow-prev releases-arrow-prev"
+          src="./img/swiperArrowLeft.svg"
+        />
+        <img
+          class="swiper-button-next swiper-arrow-next releases-arrow-next"
+          src="./img/swiperArrowRigth.svg"
+        />
+      </div>
+      <div class="movies-by-genre-titles">
+        <h2 class="main-genre-title">Movies by genre</h2>
+        <div class="genres-name">
+          <h2 class="active">Comedy</h2>
+          <h2>Drama</h2>
+          <h2>Action</h2>
+          <h2>Romance</h2>
+          <h2>Fantasy</h2>
+          <h2>Animation</h2>
+        </div>
+        <div class="line"></div>
+      </div>
+      <div
+        id="movies-by-genre"
+        class="swipers-container movies-by-genre-container"
+      >
+        <h2>Genre Name</h2>
+        <div class="swiper swiper-movies-by-genre">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card-movie">
+                <h2>The God Father part III</h2>
+                <p class="date">1990</p>
+                <!-- max 3 -->
+                <p class="genres">Crime / Drama / Thriller</p>
+                <div class="star">
+                  <img src="./img/star.svg" alt="" />
+                </div>
+                <p class="rate">7.4</p>
+                <div class="poster">
+                  <img
+                    src="https://image.tmdb.org/t/p/w500/gKkl37BQuKTanygYQG1pyYgLVgf.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+          </div>
+        </div>
+        <img
+          class="swiper-button-prev swiper-arrow-prev movies-by-genre-arrow-prev"
+          src="./img/swiperArrowLeft.svg"
+        />
+        <img
+          class="swiper-button-next swiper-arrow-next movies-by-genre-arrow-next"
           src="./img/swiperArrowRigth.svg"
         />
       </div>
     </main>
+    <footer>
+      <div class="container-footer">
+        <div class="logo">
+          <p><span>Be</span>Movies</p>
+        </div>
+        <ul>
+          <li><a href="# ">Search</a></li>
+          <li><a href="# ">Latest</a></li>
+          <li><a href="# ">Genres</a></li>
+          <li><a href="# ">Register</a></li>
+          <li><a href="# ">SignIn</a></li>
+        </ul>
+        <div class="right-protected">
+          <p>@2023 - All rights reserved</p>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="app.js" type="module"></script>
+    <script src="./js/swiperVariables.js"></script>
   </body>
 </html>
