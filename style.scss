@@ -2,9 +2,19 @@
 @import "./sass/colors";
 @import "./sass/typo";
 @import "./sass/mixins";
+@import "./sass/modal";
+
+// Ajouter dans la classList du body lorsque la modal s'ouvre
+.no-scroll {
+  overflow-y: hidden;
+}
 
 body {
   background-color: $lighterBlack;
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1;
 
   header {
     width: 100vw;

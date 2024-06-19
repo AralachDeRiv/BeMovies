@@ -21,10 +21,37 @@
           <li><a href="#latest-releases">Latest</a></li>
           <li><a href="#movies-by-genre">Genres</a></li>
           <li><a href="# ">Register</a></li>
-          <li><a href="# ">SignIn</a></li>
+          <li><a id="signInOpenModal">SignIn</a></li>
         </ul>
       </div>
     </header>
+
+    <dialog id="signForm" class="signForm dialogModal">
+      <div class="sign-card">
+        <div class="cross">
+          <img src="./img/cross.svg" />
+        </div>
+        <div class="btns">
+          <button class="SignupBtn">Signup</button>
+          <button class="LoginBtn active-red">Login</button>
+        </div>
+        <form id="loginForm" class="loginForm">
+          <input type="text" placeholder="username" id="usernameLogin" />
+          <input type="password" placeholder="password" id="passwordLogin" />
+          <div class="remember-me">
+            <input type="checkbox" id="rememberMeLogin" />
+            <label for="rememberMeLogin">Remember me</label>
+          </div>
+          <button>Login</button>
+        </form>
+        <a class="forgot-password">I forgot my password</a>
+        <div class="not-member">
+          <p>Not a member yet ?</p>
+          <a>Sign up</a>
+        </div>
+      </div>
+    </dialog>
+
     <main>
       <form class="searchMovie" id="searchMovie">
         <input type="text" class="searchMovieInput" id="searchMovieInput" />

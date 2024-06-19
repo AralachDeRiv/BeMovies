@@ -1,0 +1,106 @@
+body {
+  dialog {
+    border: none;
+    outline: none;
+    background-color: $modalBlack;
+    min-width: 410px;
+    min-height: 200px;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    &::backdrop {
+      background-color: rgba(44, 43, 43, 0.342);
+    }
+    .cross {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+  }
+
+  .signForm {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    // need to display flex when opening
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    @include ipad {
+      padding: 66px 100px 60px;
+    }
+    .btns {
+      @extend %typoButtonSignUP-Login;
+      text-transform: uppercase;
+      border-radius: 8px;
+      border: 1px solid $white;
+      display: flex;
+      overflow: hidden;
+      margin-bottom: 54px;
+      .SignupBtn {
+        padding: 11px 26px 14px 32px;
+        border-right: 1px solid $white;
+      }
+      .LoginBtn {
+        padding: 11px 45px 14px 32px;
+        border-left: 1px solid $white;
+      }
+      .active-red {
+        background-color: $red;
+      }
+    }
+    .loginForm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+
+      input {
+        width: 100%;
+        background-color: $white;
+        height: 44px;
+        border-radius: 8px;
+        margin-bottom: 25px;
+        color: $lighterBlack;
+        padding-left: 10px;
+      }
+      .remember-me {
+        display: flex;
+        align-self: flex-start;
+        gap: 5px;
+        @extend %typoH2;
+        margin-bottom: 46px;
+
+        #rememberMeLogin {
+          border: none;
+          height: 18px;
+          width: 18px;
+        }
+      }
+      button {
+        background-color: $red;
+        border-radius: 8px;
+        width: 100%;
+        height: 47px;
+        text-align: center;
+        @extend %typoButtonLogin;
+        text-transform: uppercase;
+      }
+    }
+    .forgot-password {
+      @extend %typoH2;
+      color: $red;
+    }
+    .not-member {
+      @extend %typoH2;
+      margin-top: 19px;
+      display: flex;
+      gap: 5px;
+      a {
+        color: $red;
+      }
+    }
+  }
+}

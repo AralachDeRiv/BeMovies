@@ -18,6 +18,7 @@ li {
 a {
   text-decoration: none;
   color: $white;
+  cursor: pointer;
 }
 
 body {
@@ -25,11 +26,14 @@ body {
 }
 
 input {
-  all: unset;
+  // all: unset;
+  border: none;
 }
 
 button {
+  all: unset;
   border: none;
+  cursor: pointer;
 }
 
 html {

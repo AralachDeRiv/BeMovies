@@ -16,6 +16,7 @@ li {
 a {
   text-decoration: none;
   color: #ffffff;
+  cursor: pointer;
 }
 
 body {
@@ -23,11 +24,13 @@ body {
 }
 
 input {
-  all: unset;
+  border: none;
 }
 
 button {
+  all: unset;
   border: none;
+  cursor: pointer;
 }
 
 html {
@@ -49,7 +52,7 @@ body header .container-header ul, body header footer .container-footer ul, body 
   letter-spacing: 0.03em;
 }
 
-body main .movies-by-genre-titles h2, body main .swipers-container h2 {
+body main .movies-by-genre-titles h2, body main .swipers-container h2, body .signForm .not-member, body .signForm .forgot-password, body .signForm .loginForm .remember-me {
   font-family: Inter;
   font-size: 16px;
   font-weight: 400;
@@ -91,6 +94,22 @@ body main .swipers-container .swiper .swiper-slide .card-movie .rate {
   line-height: 38.73px;
 }
 
+body .signForm .btns {
+  font-family: Inria Sans;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.78px;
+  letter-spacing: 0.03em;
+}
+
+body .signForm .loginForm button {
+  font-family: Inria Sans;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23.98px;
+  letter-spacing: 0.03em;
+}
+
 body main .searchMovie .searchMovieInput {
   font-family: Inria Sans;
   font-size: 16px;
@@ -100,8 +119,113 @@ body main .searchMovie .searchMovieInput {
 }
 
 /* MEDIA QUERIES */
+body dialog {
+  border: none;
+  outline: none;
+  background-color: #000000;
+  min-width: 410px;
+  min-height: 200px;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+}
+body dialog::backdrop {
+  background-color: rgba(44, 43, 43, 0.342);
+}
+body dialog .cross {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+body .signForm {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  body .signForm {
+    padding: 66px 100px 60px;
+  }
+}
+body .signForm .btns {
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 54px;
+}
+body .signForm .btns .SignupBtn {
+  padding: 11px 26px 14px 32px;
+  border-right: 1px solid #ffffff;
+}
+body .signForm .btns .LoginBtn {
+  padding: 11px 45px 14px 32px;
+  border-left: 1px solid #ffffff;
+}
+body .signForm .btns .active-red {
+  background-color: #cc0000;
+}
+body .signForm .loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+body .signForm .loginForm input {
+  width: 100%;
+  background-color: #ffffff;
+  height: 44px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  color: #191b20;
+  padding-left: 10px;
+}
+body .signForm .loginForm .remember-me {
+  display: flex;
+  align-self: flex-start;
+  gap: 5px;
+  margin-bottom: 46px;
+}
+body .signForm .loginForm .remember-me #rememberMeLogin {
+  border: none;
+  height: 18px;
+  width: 18px;
+}
+body .signForm .loginForm button {
+  background-color: #cc0000;
+  border-radius: 8px;
+  width: 100%;
+  height: 47px;
+  text-align: center;
+  text-transform: uppercase;
+}
+body .signForm .forgot-password {
+  color: #cc0000;
+}
+body .signForm .not-member {
+  margin-top: 19px;
+  display: flex;
+  gap: 5px;
+}
+body .signForm .not-member a {
+  color: #cc0000;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
 body {
   background-color: #191b20;
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1;
 }
 body header, body footer {
   width: 100vw;
