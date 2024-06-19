@@ -102,10 +102,6 @@ body {
       }
     }
 
-    .result-container {
-      margin-bottom: 95px;
-    }
-
     .swipers-container {
       position: relative;
       max-width: 1075px;
@@ -133,6 +129,10 @@ body {
         top: 200px;
         right: -40px;
       }
+    }
+
+    .result-container {
+      margin-bottom: 95px;
     }
   }
 }

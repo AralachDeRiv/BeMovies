@@ -150,9 +150,6 @@ body main .searchMovie .searchMovieBtn img {
 body main .searchMovie .searchMovieBtn:hover {
   background-color: #660000;
 }
-body main .result-container {
-  margin-bottom: 95px;
-}
 body main .swipers-container {
   position: relative;
   max-width: 1075px;
@@ -178,4 +175,7 @@ body main .swipers-container .swiper-arrow-next {
   position: absolute;
   top: 200px;
   right: -40px;
+}
+body main .result-container {
+  margin-bottom: 95px;
 }/*# sourceMappingURL=style.css.map */
