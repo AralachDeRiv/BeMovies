@@ -66,6 +66,7 @@ body {
     .searchMovie {
       display: flex;
       align-items: center;
+      margin-bottom: 61px;
       .searchMovieInput {
         @extend %typoFilmPModal;
         font-size: 20px;
@@ -98,6 +99,39 @@ body {
         &:hover {
           background-color: darken($red, 20%);
         }
+      }
+    }
+
+    .result-container {
+      margin-bottom: 95px;
+    }
+
+    .swipers-container {
+      position: relative;
+      max-width: 1075px;
+      h2 {
+        @extend %typoH2;
+        margin-bottom: 10px;
+      }
+      .swiper {
+        max-width: 1000px;
+        width: 100%;
+
+        .swiper-slide {
+          background-color: $darkerBlack;
+          height: 351px;
+          width: 254px;
+        }
+      }
+      .swiper-arrow-prev {
+        position: absolute;
+        top: 200px;
+        left: -40px;
+      }
+      .swiper-arrow-next {
+        position: absolute;
+        top: 200px;
+        right: -40px;
       }
     }
   }
