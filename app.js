@@ -71,7 +71,6 @@ const displayMovieModal = async (movie) => {
     apiFunctions.getOverview(movie);
   let casting = await apiFunctions.getCastingFromMovie(movie);
   casting = casting.slice(0, 5).join(", ");
-  console.log(casting);
   document.getElementById(
     "cast-modal"
   ).innerHTML = `<span>Cast :</span> ${casting}`;
