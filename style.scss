@@ -208,6 +208,7 @@ body {
     }
 
     .result-container {
+      display: none;
       margin-bottom: 95px;
     }
     .latest-releases-container {
@@ -237,6 +238,8 @@ body {
         h2 {
           padding: 7px 10px;
           border-radius: 8px;
+          cursor: pointer;
+          @include transition;
         }
 
         .active {

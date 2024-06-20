@@ -5,6 +5,7 @@ const myBreakpoints = {
   },
   1024: {
     slidesPerView: 3,
+    spaceBetween: 10,
   },
   768: {
     slidesPerView: 2,

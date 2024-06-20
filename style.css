@@ -520,6 +520,7 @@ body main .swipers-container .swiper-arrow-next {
   width: 18px;
 }
 body main .result-container {
+  display: none;
   margin-bottom: 95px;
 }
 body main .latest-releases-container {
@@ -545,6 +546,8 @@ body main .movies-by-genre-titles .genres-name {
 body main .movies-by-genre-titles .genres-name h2 {
   padding: 7px 10px;
   border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 body main .movies-by-genre-titles .genres-name .active {
   background-color: #cc0000;
