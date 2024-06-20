@@ -25,6 +25,11 @@ body {
 
 input {
   border: none;
+  outline: none;
+}
+
+input:focus {
+  outline: none;
 }
 
 button {
@@ -37,6 +42,11 @@ html {
   scroll-behavior: smooth;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+}
+
 body header .container-header .logo, body footer .container-header .logo, body footer .container-footer .logo {
   font-family: Inria Sans;
   font-size: 36px;
@@ -44,7 +54,7 @@ body header .container-header .logo, body footer .container-header .logo, body f
   line-height: 43.16px;
 }
 
-body header .container-header ul, body header footer .container-footer ul, body footer header .container-footer ul, body footer .container-header ul, body footer .container-footer ul {
+body header .container-header ul, body header footer .container-footer ul, body footer header .container-footer ul, body footer .container-header ul, body footer .container-footer ul, body .movieModal .text-container .genres {
   font-family: Inria Sans;
   font-size: 14px;
   font-weight: 700;
@@ -110,7 +120,30 @@ body .signForm .loginForm button {
   letter-spacing: 0.03em;
 }
 
-body main .searchMovie .searchMovieInput {
+body .movieModal .text-container h2 {
+  font-family: Inria Sans;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23.98px;
+  letter-spacing: 0.03em;
+}
+
+body .movieModal .text-container .date {
+  font-family: Inria Sans;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.79px;
+  letter-spacing: 0.03em;
+}
+
+body .movieModal .text-container .rate-container .rate {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.2px;
+}
+
+body main .searchMovie .searchMovieInput, body .movieModal .text-container .casting .casting-list, body .movieModal .text-container .text-description {
   font-family: Inria Sans;
   font-size: 16px;
   font-weight: 300;
@@ -118,12 +151,23 @@ body main .searchMovie .searchMovieInput {
   letter-spacing: 0.03em;
 }
 
+body .movieModal .text-container .casting span {
+  font-family: Inria Sans;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.79px;
+  letter-spacing: 0.03em;
+}
+
 /* MEDIA QUERIES */
+.no-scroll {
+  overflow-y: hidden;
+}
+
 body dialog {
   border: none;
   outline: none;
   background-color: #000000;
-  min-width: 410px;
   min-height: 200px;
   position: fixed;
   top: 50vh;
@@ -215,9 +259,78 @@ body .signForm .not-member {
 body .signForm .not-member a {
   color: #cc0000;
 }
-
-.no-scroll {
-  overflow-y: hidden;
+body .movieModal {
+  padding-top: 74px;
+  padding-bottom: 49px;
+  max-width: 350px;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 49px;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  body .movieModal {
+    flex-direction: row;
+    align-items: start;
+    max-width: 742px;
+  }
+}
+body .movieModal .poster-container {
+  display: none;
+  height: 351px;
+  min-width: 234px;
+  border: 2px solid #ffffff;
+}
+@media screen and (min-width: 768px) {
+  body .movieModal .poster-container {
+    display: flex;
+  }
+}
+body .movieModal .poster-container img {
+  height: 100%;
+  width: 100%;
+}
+body .movieModal .text-container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+body .movieModal .text-container h2 {
+  text-transform: uppercase;
+  color: #cc0000;
+}
+body .movieModal .text-container .date {
+  margin-bottom: 11px;
+}
+body .movieModal .text-container .rate-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+body .movieModal .text-container .rate-container .star {
+  height: 21px;
+  width: 21px;
+}
+body .movieModal .text-container .rate-container .rate {
+  color: #cc0000;
+}
+body .movieModal .text-container .genres {
+  text-transform: uppercase;
+  margin-bottom: 13px;
+}
+body .movieModal .text-container .text-description {
+  margin-bottom: 28px;
+}
+body .movieModal .text-container .casting span {
+  white-space: nowrap;
+  text-transform: uppercase;
+  margin-right: 5px;
+}
+body .movieModal .text-container .casting .casting-list {
+  font-weight: 400;
 }
 
 body {

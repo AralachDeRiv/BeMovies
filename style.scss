@@ -4,11 +4,6 @@
 @import "./sass/mixins";
 @import "./sass/modal";
 
-// Ajouter dans la classList du body lorsque la modal s'ouvre
-.no-scroll {
-  overflow-y: hidden;
-}
-
 body {
   background-color: $lighterBlack;
   width: 100vw;

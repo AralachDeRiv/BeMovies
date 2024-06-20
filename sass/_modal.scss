@@ -1,9 +1,13 @@
+// Ajouter dans la classList du body lorsque la modal s'ouvre
+.no-scroll {
+  overflow-y: hidden;
+}
+
 body {
   dialog {
     border: none;
     outline: none;
     background-color: $modalBlack;
-    min-width: 410px;
     min-height: 200px;
     position: fixed;
     top: 50vh;
@@ -100,6 +104,94 @@ body {
       gap: 5px;
       a {
         color: $red;
+      }
+    }
+  }
+
+  .movieModal {
+    padding-top: 74px;
+    padding-bottom: 49px;
+    max-width: 350px;
+    width: 100%;
+    // !! need to display flex when opening modal
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 49px;
+    flex-direction: column;
+
+    @include ipad {
+      flex-direction: row;
+      align-items: start;
+      max-width: 742px;
+    }
+
+    .poster-container {
+      display: none;
+
+      @include ipad {
+        display: flex;
+      }
+
+      height: 351px;
+      min-width: 234px;
+      border: 2px solid $white;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+
+      h2 {
+        text-transform: uppercase;
+        @extend %typoFilmTitleModal;
+        color: $red;
+      }
+      .date {
+        @extend %typoFilmDateGenreCastModal;
+        margin-bottom: 11px;
+      }
+      .rate-container {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 12px;
+        .star {
+          height: 21px;
+          width: 21px;
+        }
+        .rate {
+          @extend %typoFilmRateModal;
+          color: $red;
+        }
+      }
+      .genres {
+        text-transform: uppercase;
+        @extend %typoMenuBar;
+        margin-bottom: 13px;
+      }
+
+      .text-description {
+        @extend %typoFilmPModal;
+        margin-bottom: 28px;
+      }
+
+      .casting {
+        span {
+          white-space: nowrap;
+          text-transform: uppercase;
+          @extend %typoFilmCastModal;
+          margin-right: 5px;
+        }
+        .casting-list {
+          @extend %typoFilmPModal;
+          font-weight: 400;
+        }
       }
     }
   }

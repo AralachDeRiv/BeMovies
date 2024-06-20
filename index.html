@@ -52,6 +52,39 @@
       </div>
     </dialog>
 
+    <dialog id="movieModal" class="movieModal">
+      <div class="cross">
+        <img src="./img/cross.svg" />
+      </div>
+      <div class="poster-container" id="poster-modal">
+        <img
+          src="https://image.tmdb.org/t/p/w500/gKkl37BQuKTanygYQG1pyYgLVgf.jpg"
+        />
+      </div>
+      <div class="text-container">
+        <h2 id="title-modal">The Godfather</h2>
+        <p class="date" id="date-modal">1972</p>
+        <div class="rate-container">
+          <div class="star"><img src="./img/star.svg" alt="" /></div>
+          <p class="rate" id="rate-modal">7.4</p>
+        </div>
+        <p class="genres" id="genres-modal">Crime / Drama / Romance</p>
+        <p class="text-description" id="overview-modal">
+          Spanning the years 1945 to 1955, a chronicle of the fictional
+          Italian-American Corleone crime family. When organized crime family
+          patriarch, Vito Corleone barely survives an attempt on his life, his
+          youngest son, Michael steps in to take care of the would-be killers,
+          launching a campaign of bloody revenge.
+        </p>
+        <div class="casting">
+          <p class="casting-list" id="cast-modal">
+            <span>Cast :</span>
+            Marlon Brando, Al Pacino, James Caan, Robert Duvall
+          </p>
+        </div>
+      </div>
+    </dialog>
+
     <main>
       <form class="searchMovie" id="searchMovie">
         <input type="text" class="searchMovieInput" id="searchMovieInput" />
@@ -62,7 +95,7 @@
       <div class="swipers-container result-container">
         <h2 id="title-results">Results for XXX</h2>
         <div class="swiper swiper-result">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper" id="wrapper-result">
             <div class="swiper-slide">
               <div class="card-movie">
                 <!-- mettre le titre -->
@@ -110,7 +143,7 @@
       >
         <h2>Latest releases</h2>
         <div class="swiper swiper-latest-releases">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper" id="wrapper-latest-release">
             <div class="swiper-slide">Slide 7</div>
             <div class="swiper-slide">Slide 7</div>
             <div class="swiper-slide">Slide 7</div>
@@ -131,12 +164,12 @@
       <div class="movies-by-genre-titles">
         <h2 class="main-genre-title">Movies by genre</h2>
         <div class="genres-name">
-          <h2 class="active">Comedy</h2>
-          <h2>Drama</h2>
-          <h2>Action</h2>
-          <h2>Romance</h2>
-          <h2>Fantasy</h2>
-          <h2>Animation</h2>
+          <h2 id="Comedy" class="genreBtn active">Comedy</h2>
+          <h2 id="Drama" class="genreBtn">Drama</h2>
+          <h2 id="Action" class="genreBtn">Action</h2>
+          <h2 id="Romance" class="genreBtn">Romance</h2>
+          <h2 id="Fantasy" class="genreBtn">Fantasy</h2>
+          <h2 id="Animation" class="genreBtn">Animation</h2>
         </div>
         <div class="line"></div>
       </div>
@@ -144,9 +177,9 @@
         id="movies-by-genre"
         class="swipers-container movies-by-genre-container"
       >
-        <h2>Genre Name</h2>
+        <h2 id="genre-title">Genre Name</h2>
         <div class="swiper swiper-movies-by-genre">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper" id="wrapper-movies-by-genre">
             <div class="swiper-slide">
               <div class="card-movie">
                 <h2>The God Father part III</h2>
