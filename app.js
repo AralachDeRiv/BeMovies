@@ -107,11 +107,19 @@ const resultContainer = document.querySelector(".result-container");
 searchMovieForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   let userInput = document.getElementById("searchMovieInput").value;
-  document.getElementById(
-    "title-results"
-  ).innerText = `Results for ${userInput}`;
   const listOfMovies = await apiFunctions.searchMovie(userInput);
-  await displayMovieHover(listOfMovies, wrapperResult);
+  if (listOfMovies.length) {
+    await displayMovieHover(listOfMovies, wrapperResult);
+    document.getElementById(
+      "title-results"
+    ).innerText = `Results for ${userInput}`;
+  } else {
+    wrapperResult.innerHTML = "";
+    document.getElementById(
+      "title-results"
+    ).innerText = `No result for ${userInput}`;
+  }
+
   resultContainer.style.display = "block";
 });
 
