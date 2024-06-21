@@ -28,14 +28,20 @@ body {
   }
 
   .signForm {
+    width: 100%;
+    max-width: 410px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-top: 40px;
     padding-bottom: 60px;
+    overflow-x: hidden;
     // need to display flex when opening
     display: none;
     flex-direction: column;
     align-items: center;
 
     @include ipad {
+      width: auto;
       padding: 66px 100px 60px;
     }
     .btns {
@@ -47,10 +53,12 @@ body {
       overflow: hidden;
       margin-bottom: 54px;
       .SignupBtn {
+        @include transition;
         padding: 11px 26px 14px 32px;
         border-right: 1px solid $white;
       }
       .LoginBtn {
+        @include transition;
         padding: 11px 45px 14px 32px;
         border-left: 1px solid $white;
       }
@@ -91,6 +99,10 @@ body {
         text-align: center;
         @extend %typoButtonLogin;
         text-transform: uppercase;
+        @include transition;
+        &:hover {
+          background-color: darken($red, 20%);
+        }
       }
     }
     .forgot-password {
