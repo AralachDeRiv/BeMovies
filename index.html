@@ -20,8 +20,8 @@
           <li><a href="#searchMovie">Search</a></li>
           <li><a href="#latest-releases">Latest</a></li>
           <li><a href="#movies-by-genre">Genres</a></li>
-          <li><a href="# ">Register</a></li>
-          <li><a id="signInOpenModal">SignIn</a></li>
+          <li><a class="registerBtn">Register</a></li>
+          <li><a class="signInBtn">SignIn</a></li>
         </ul>
       </div>
     </header>
@@ -35,7 +35,7 @@
           <button class="SignupBtn">Signup</button>
           <button class="LoginBtn active-red">Login</button>
         </div>
-        <form id="loginForm" class="loginForm">
+        <!-- <form id="loginForm" class="login-signUp-Form">
           <input type="text" placeholder="username" id="usernameLogin" />
           <input type="password" placeholder="password" id="passwordLogin" />
           <div class="remember-me">
@@ -43,6 +43,12 @@
             <label for="rememberMeLogin">Remember me</label>
           </div>
           <button>Login</button>
+        </form> -->
+        <form id="SignUpForm" class="login-signUp-Form">
+          <input type="text" placeholder="username" id="usernameSignUP" />
+          <input type="password" placeholder="password" id="passwordSignUP" />
+          <input type="text" placeholder="email" id="emailSignUP" />
+          <button>SignUp</button>
         </form>
         <a class="forgot-password">I forgot my password</a>
         <div class="not-member">
@@ -183,8 +189,8 @@
           <li><a href="#searchMovie">Search</a></li>
           <li><a href="#latest-releases">Latest</a></li>
           <li><a href="#movies-by-genre">Genres</a></li>
-          <li><a href="# ">Register</a></li>
-          <li><a href="# ">SignIn</a></li>
+          <li><a class="registerBtn">Register</a></li>
+          <li><a class="signInBtn">SignIn</a></li>
         </ul>
         <div class="right-protected">
           <p>@2023 - All rights reserved</p>
@@ -195,5 +201,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="app.js" type="module"></script>
     <script src="./js/swiperVariables.js"></script>
+    <script src="./js/registerSignInModal.js"></script>
   </body>
 </html>

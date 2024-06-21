@@ -22,6 +22,9 @@ body {
       top: 10px;
       left: 10px;
     }
+    .active-red {
+      background-color: $red;
+    }
   }
 
   .signForm {
@@ -51,11 +54,8 @@ body {
         padding: 11px 45px 14px 32px;
         border-left: 1px solid $white;
       }
-      .active-red {
-        background-color: $red;
-      }
     }
-    .loginForm {
+    .login-signUp-Form {
       display: flex;
       flex-direction: column;
       align-items: center;

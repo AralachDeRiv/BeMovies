@@ -62,7 +62,7 @@ body header .container-header ul, body header footer .container-footer ul, body 
   letter-spacing: 0.03em;
 }
 
-body main .movies-by-genre-titles h2, body main .swipers-container h2, body .signForm .not-member, body .signForm .forgot-password, body .signForm .loginForm .remember-me {
+body main .movies-by-genre-titles h2, body main .swipers-container h2, body .signForm .not-member, body .signForm .forgot-password, body .signForm .login-signUp-Form .remember-me {
   font-family: Inter;
   font-size: 16px;
   font-weight: 400;
@@ -112,7 +112,7 @@ body .signForm .btns {
   letter-spacing: 0.03em;
 }
 
-body .signForm .loginForm button {
+body .signForm .login-signUp-Form button {
   font-family: Inria Sans;
   font-size: 20px;
   font-weight: 700;
@@ -183,6 +183,9 @@ body dialog .cross {
   top: 10px;
   left: 10px;
 }
+body dialog .active-red {
+  background-color: #cc0000;
+}
 body .signForm {
   padding-top: 40px;
   padding-bottom: 60px;
@@ -211,16 +214,13 @@ body .signForm .btns .LoginBtn {
   padding: 11px 45px 14px 32px;
   border-left: 1px solid #ffffff;
 }
-body .signForm .btns .active-red {
-  background-color: #cc0000;
-}
-body .signForm .loginForm {
+body .signForm .login-signUp-Form {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
 }
-body .signForm .loginForm input {
+body .signForm .login-signUp-Form input {
   width: 100%;
   background-color: #ffffff;
   height: 44px;
@@ -229,18 +229,18 @@ body .signForm .loginForm input {
   color: #191b20;
   padding-left: 10px;
 }
-body .signForm .loginForm .remember-me {
+body .signForm .login-signUp-Form .remember-me {
   display: flex;
   align-self: flex-start;
   gap: 5px;
   margin-bottom: 46px;
 }
-body .signForm .loginForm .remember-me #rememberMeLogin {
+body .signForm .login-signUp-Form .remember-me #rememberMeLogin {
   border: none;
   height: 18px;
   width: 18px;
 }
-body .signForm .loginForm button {
+body .signForm .login-signUp-Form button {
   background-color: #cc0000;
   border-radius: 8px;
   width: 100%;
