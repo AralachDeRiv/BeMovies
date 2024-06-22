@@ -193,7 +193,7 @@ body .signForm {
   padding-right: 10px;
   padding-top: 40px;
   padding-bottom: 60px;
-  overflow-x: hidden;
+  overflow: hidden;
   display: none;
   flex-direction: column;
   align-items: center;
