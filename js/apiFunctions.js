@@ -72,10 +72,15 @@ const getGenresListID = async () => {
     if (response.ok) {
       const JSONresponse = await response.json();
       return JSONresponse.genres;
+    } else {
+      console.error(
+        `Network error: ${response.status} - ${response.statusText}`
+      );
+      return [];
     }
-    console.log("Network error");
   } catch (err) {
-    console.log(err);
+    console.error(`Fetch error: ${err}`);
+    return [];
   }
 };
 
